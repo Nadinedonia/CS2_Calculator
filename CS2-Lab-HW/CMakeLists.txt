@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.10)
 project(CS2-Lab-HW)
 
 set(SOURCE_FILES     
-calculator.h 
+test.cpp
 calculator.cpp                  
 	   
 )
