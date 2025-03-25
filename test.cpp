@@ -57,8 +57,13 @@ int main () {
                     cout << "LCM(" << x << ", " << y << ") = " << lcm(static_cast<int>(x), static_cast<int>(y)) << endl;
                     break;
                 case 'R': case 'r'
-                    cout << "Random number between " << x << " and " << y << ": " << random(static_cast<int>(x), static_cast<int>(y)) << endl;
-                    break;
+                   if (x < y) {  
+        cout << "Swapping values to ensure correct range..." << endl;
+        cout << "Random number between " << y << " and " << x << ": " << rand(static_cast<int>(y), static_cast<int>(x)) << endl;
+    } else {
+        cout << "Random number between " << x << " and " << y << ": " << rand(static_cast<int>(x), static_cast<int>(y)) << endl;
+    }
+    break;
                 default:
                     cout << "Invalid operation. Please try again." << endl;
             }
